@@ -15,7 +15,7 @@ describe('Catalog', () => {
     cy.contains('Return to Main Menu').click();
     cy.get('img[src="../images/birds_icon.gif"]').click();
     cy.contains('Return to Main Menu').click();
-    cy.screenshot();
+    
   })
 
 })

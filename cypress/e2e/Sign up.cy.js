@@ -7,7 +7,7 @@ describe('Sign up', () => {
   it('JPD-3: FE | Sign up | Registro de usuario exitoso', () => {
     cy.contains('Sign In').click(); // Hace clic en el enlace "Sign In"
     cy.contains('Register Now!').click();// Hace clic en "Register Now!"
-    cy.get('input[name="username"]').type('J1234'); // Ingresa un dato en el campo correspondiente , cambiar 
+    cy.get('input[name="username"]').type('Juan123456'); // Ingresa un dato en el campo correspondiente
     cy.get('input[name="password"]').type('1234');
     cy.get('input[name="repeatedPassword"]').type('1234');
     cy.get('input[name="account.firstName"]').type('Juan');
@@ -24,10 +24,8 @@ describe('Sign up', () => {
     cy.get('select[name="account.favouriteCategoryId"]').select('DOGS');// Selecciona la categoría de productos favorita
     cy.get('input[name="account.listOption"]').check(); // Marca la opción 
     cy.get('input[name="account.bannerOption"]').check(); // Marca la opción 
-    cy.screenshot();
     cy.get('input[name="newAccount"]').click(); // Hace clic en el botón para crear la nueva cuenta
-    
-    
+    cy.screenshot();
   })
 
 })
